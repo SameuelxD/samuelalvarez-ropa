@@ -5,17 +5,15 @@ using System.Threading.Tasks;
 
 namespace Core.Entities
 {
-    public class Orden
+    public class Venta:BaseEntity
     {
-        public int IdOrden { get; set; }
         public DateTime Fecha { get; set; }
         public int IdEmpleado { get; set; }
         public int IdCliente { get; set; }
-        public int IdEstado { get; set; }
-        public ICollection<DetalleOrden> DetallesOrden { get; set; }
+        public int IdFormaPago { get; set; }
         public Empleado Empleados { get; set; }
         public Cliente Clientes { get; set; }
-        public Estado Estados { get; set; }
-        
+        public FormaPago FormasPago { get; set; } 
+        public ICollection<DetalleVenta> DetallesVenta { get; set; }
     }
 }

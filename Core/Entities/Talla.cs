@@ -5,15 +5,10 @@ using System.Threading.Tasks;
 
 namespace Core.Entities
 {
-    public class Inventario:BaseEntity
+    public class Talla:BaseEntity
     {
-        public int CodInv { get; set; }
-        public int IdPrenda { get; set; }
-        public double ValorVtaCop { get; set; }
-        public double ValorVtaUsd { get; set; }
-        public Prenda Prendas { get; set; }
+        public string Descripcion { get; set; }
         public ICollection<DetalleVenta> DetallesVenta { get; set; }
         public ICollection<InventarioTalla> InventarioTallas { get; set; }
-
     }
 }

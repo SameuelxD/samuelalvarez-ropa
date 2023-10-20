@@ -3,19 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Core.Entities
+namespace API.Dtos
 {
-    public class Orden
+    public class OrdenDto
     {
         public int IdOrden { get; set; }
         public DateTime Fecha { get; set; }
         public int IdEmpleado { get; set; }
         public int IdCliente { get; set; }
         public int IdEstado { get; set; }
-        public ICollection<DetalleOrden> DetallesOrden { get; set; }
-        public Empleado Empleados { get; set; }
-        public Cliente Clientes { get; set; }
-        public Estado Estados { get; set; }
-        
     }
 }
